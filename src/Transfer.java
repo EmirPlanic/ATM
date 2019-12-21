@@ -3,7 +3,7 @@ public class Transfer extends User {
 
 		
 		public static void transfer() {
-			System.out.print("Enter withdraw amount: ");
+			
             
            
 
