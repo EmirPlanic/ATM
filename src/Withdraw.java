@@ -10,7 +10,7 @@ public class Withdraw extends User {
 
 		System.out.println("Enter your account number: ");
 		int id = input.nextInt();
-		System.out.println("Enter deposit amount");
+		System.out.println("Enter withdraw amount");
 		double amount = input.nextDouble();
 		
 		
