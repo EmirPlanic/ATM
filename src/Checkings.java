@@ -6,7 +6,7 @@ public class Checkings {
 	
 	static boolean checkAccWhenMaking(int id, double balance) {
 		
-		 if (id == (int)id) {
+		 if (id != (int)id) {
 		
 			 System.out.println("Process failed");
 			 return false;

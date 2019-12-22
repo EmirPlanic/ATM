@@ -12,10 +12,7 @@ public class Menu {
 		boolean shouldExit = false;
 	
 	while (!shouldExit) {
-    //	try {
-    	
-   
-    //	Scanner input = new Scanner(System.in);
+    
 
 
             System.out.println("Main Menu: ");
@@ -34,7 +31,7 @@ public class Menu {
               input.next();
                continue;
            }
-         //   choice = input.nextInt();
+       
 
             if (choice == 1) {
                 Info.showInfo();
@@ -63,7 +60,7 @@ public class Menu {
                continue;
             }
 
-    //    }catch (Exception e) {
+ 
         	
         
             
