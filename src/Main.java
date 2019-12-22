@@ -29,6 +29,7 @@ public class Main {
 		            System.out.println("2: Withdraw");
 		            System.out.println("3: Deposit");
 		            System.out.println("4: Transaction");
+		            System.out.println("5: Make a new Acc");
 		            
 
 		            System.out.print("Enter a choice: ");
@@ -52,10 +53,17 @@ public class Main {
 		                	continue;
 	
 		           }
+		            else if (choice == 5) {
+		            	User.openAccount();
+		            	continue;
+		            }
+		            else if (choice <= 0 && choice > 5)
+		            	System.out.println("U can only choose numbers from 1 to 5");
 
 		
 		        }catch (Exception e) {
 		            System.out.println("Error!");
+		            
 		        }
 
 		    }
