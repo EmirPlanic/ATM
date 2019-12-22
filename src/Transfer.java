@@ -4,15 +4,36 @@ public class Transfer extends User {
 		
 		public static void transfer() {
 			
+			int fromID = 0;
+			int toID = 0;
+			double transferAmount = 0;
             
            
 
 			System.out.println("Enter your account number: ");
-			int fromID = input.nextInt();
+			 if (input.hasNextInt())
+		            fromID = input.nextInt();
+		      else {
+		          input.next();
+		             
+		        }
+		
 			System.out.println("Enter targetted account number: ");
-			int toID = input.nextInt();
+			if (input.hasNextInt())
+	            toID = input.nextInt();
+	      else {
+	          input.next();
+	             
+	        }
+		
 			System.out.println("Enter the amount you would like to transfer: ");
-			double transferAmount = input.nextDouble();
+			if (input.hasNextDouble())
+	            transferAmount = input.nextDouble();
+	      else {
+	          input.next();
+	             
+	        }
+
 			
 			
      if (Checkings.checkIfAccHasEnoughtFunds(fromID , transferAmount) && Checkings.checkIfAccExists(fromID) && Checkings.checkIfAccExists(toID)){

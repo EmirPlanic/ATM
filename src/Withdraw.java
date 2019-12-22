@@ -5,13 +5,25 @@ public class Withdraw extends User {
 
 	public static void withdraw () {
 		
-        
+        int id = 0;
+        double amount = 0;
 	       
 
 		System.out.println("Enter your account number: ");
-		int id = input.nextInt();
+		 if (input.hasNextInt())
+	            id = input.nextInt();
+	      else {
+	          input.next();
+	             
+	        }
+	
 		System.out.println("Enter withdraw amount");
-		double amount = input.nextDouble();
+		if (input.hasNextDouble())
+            amount = input.nextDouble();
+      else {
+          input.next();
+             
+        }
 		
 		
 		

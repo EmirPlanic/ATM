@@ -1,15 +1,21 @@
 import java.util.Scanner;
+import java.util.InputMismatchException;
 
 public class Menu {
 	
 	
 	static void menuOption () {
+		Scanner input = new Scanner(System.in);
+		
+		int choice;
+		
+		boolean shouldExit = false;
 	
-	while (true) {
-    	try {
+	while (!shouldExit) {
+    //	try {
     	
    
-    	Scanner input = new Scanner(System.in);
+    //	Scanner input = new Scanner(System.in);
 
 
             System.out.println("Main Menu: ");
@@ -21,7 +27,14 @@ public class Menu {
             
 
             System.out.print("Enter a choice: ");
-            int choice = input.nextInt();
+            
+           if (input.hasNextInt())
+               choice = input.nextInt();
+           else {
+              input.next();
+               continue;
+           }
+         //   choice = input.nextInt();
 
             if (choice == 1) {
                 Info.showInfo();
@@ -45,16 +58,23 @@ public class Menu {
             	User.openAccount();
             	continue;
             }
-            else if (choice <= 0 && choice > 5)
+            else if (choice <= 0 || choice >= 5) {
             	System.out.println("U can only choose numbers from 1 to 5");
+               continue;
+            }
 
-
-        }catch (Exception e) {
-            System.out.println("Error!");
+    //    }catch (Exception e) {
+        	
+        
             
-        }
+            
+        
+    	
+    	
+    	
 
     }
+	
 	
 	}
 	

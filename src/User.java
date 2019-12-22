@@ -40,12 +40,33 @@ public class User {
 		{ 
 			Scanner input = new Scanner (System.in);
 			
+			int id = 0;
+			double balance = 0;
+			
 			System.out.print("Enter Account ID: ");
-			int id=input.nextInt();
+			 if (input.hasNextInt())
+		            id = input.nextInt();
+		      else {
+		          input.next();
+		             
+		        }
+			 
+			 
+			
 			System.out.print("Enter Name: ");
 			String name=input.next();
+			
+			
+			
+			
 			System.out.print("Enter Balance: ");
-			double balance=input.nextDouble();
+			if (input.hasNextDouble())
+	            balance = input.nextDouble();
+	      else {
+	          input.next();
+	             
+	        }
+	
 			
 			
 			newAccount(id,name,balance);
@@ -62,6 +83,8 @@ public class User {
 				
 			System.out.println("Account created successfully!");
 			}
+			else
+				System.out.println("Failed to creat account");
 		}
 		
 

@@ -3,13 +3,26 @@ public class Deposit extends User {
 	
 	public static void deposit () {
 		
-        
-       
+        int id=0;
+        int amount=0;
 
 		System.out.println("Enter your account number: ");
-		int id = input.nextInt();
+		 if (input.hasNextInt())
+            id = input.nextInt();
+      else {
+          input.next();
+             
+        }
+
 		System.out.println("Enter deposit amount");
-		double amount = input.nextDouble();
+		 if (input.hasNextInt())
+	            amount = input.nextInt();
+	         else {
+	          input.next();
+	             
+	         }
+		
+
 		
 		
 		
