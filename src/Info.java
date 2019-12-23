@@ -3,8 +3,17 @@ public class Info extends User {
 	
 	
 	public static void showInfo() {
-		System.out.println("Enter account number: ");
-		int id = input.nextInt();
+		
+		int id = 0;
+		
+		System.out.println("Enter your account number: ");
+		 if (input.hasNextInt())
+           id = input.nextInt();
+     else {
+         input.next();
+            
+       }
+		
 		
 		if(Checkings.checkIfAccExists(id)) {
 
