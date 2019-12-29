@@ -21,10 +21,10 @@ public class Info extends User {
 		System.out.println("Acc info: ");
 
 		for (int i = 0; i < accounts.size(); i++) {
-			if (accounts.get(i).id == id ) {
-				System.out.println("Owner: " + accounts.get(i).name +
-				"\nAcc number: " + accounts.get(i).id +
-				"\nBalance : " + accounts.get(i).balance);
+			if (accounts.get(i).getID() == id ) {
+				System.out.println("Owner: " + accounts.get(i).getName() +
+				"\nAcc number: " + accounts.get(i).getID() +
+				"\nBalance : " + accounts.get(i).getBalance());
 				
 			}
 			

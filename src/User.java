@@ -5,11 +5,11 @@ import java.util.Scanner;
 
 public  class User {
 
-	protected  int id;
+	private  int id;
 	
-	protected  double balance;
+	private  double balance;
 
-	protected  String name;
+	private  String name;
 
 	static	ArrayList<User> accounts = new ArrayList<User>();
 	

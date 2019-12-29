@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Checkings {
+public class Checkings extends User {
 	
 	
 	
